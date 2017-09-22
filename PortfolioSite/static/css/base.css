@@ -19,8 +19,20 @@
 
 /* Portfolio Tiles */
 
+@keyframes tile-on {
+    0%   {opacity:0;}
+    100%  {opacity:100;}
+}
+
+
 #portfolio img{
     width: 100%;
     border-style: solid;
     border-width: 3px;
+}
+
+.project{
+    visibility: hidden;
+    animation-name: tile-on;
+    animation-duration: 2s;
 }
