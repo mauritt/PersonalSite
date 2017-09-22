@@ -3,22 +3,27 @@
     <head>
         {% load staticfiles %}
         <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="{% static "bootstrap/css/bootstrap.css" %}">
+        <link rel="stylesheet" type="text/css" href="{% static "css/base.css" %}">
+
         <title>{% block title %}{% endblock %}</title>
     </head>
 
     <body>
+        <div class="container">
         <header>
             <h1>Michael Auritt</h1>
             <h2>Video Producer &amp; Python Developer</h2>
-
-            <nav>
-                <ul>
-                    <li>Home</li>
-                    <li><a href="{% url 'projects:portfolio' 'Video' %}">Videos</a></li>
-                    <li>Code</li>
-                    <li>Contact</li>
+            <div class="row">
+            <nav class="col-md-12">
+                <ul style="list-style-type: none">
+                    <li style="display: inline;">Home</li>
+                    <li style="display: inline;"><a href="{% url 'projects:portfolio' 'Video' %}">Videos</a></li>
+                    <li style="display: inline;">Code</li>
+                    <li style="display: inline;">Contact</li>
                 </ul>
             </nav>
+            </div>
 
             {% block header %}
             {% endblock %}
@@ -30,6 +35,8 @@
             {% block content %}
             {% endblock %}
         </main>
+
+    </div>
 
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>

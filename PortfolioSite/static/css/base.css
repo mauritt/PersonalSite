@@ -1,0 +1,26 @@
+/* Header */
+ nav ul{
+    list-style-type: none;
+
+ }
+
+ nav li{
+    display: inline;
+    padding-right: 1%;
+ }
+
+ nav a{
+
+ }
+
+
+
+
+
+/* Portfolio Tiles */
+
+#portfolio img{
+    width: 100%;
+    border-style: solid;
+    border-width: 3px;
+}
