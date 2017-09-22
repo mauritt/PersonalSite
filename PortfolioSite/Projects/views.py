@@ -10,3 +10,10 @@ def portfolio(request, project_type):
 
     if project_type.lower() == 'video':
         return render(request, 'portfolio/videoPortfolio.html', context)
+
+def detail(request, project_id):
+    project = get_object_or_404(Project, id = project_id)
+    context = {'project': project}
+
+
+    return render(request, 'portfolio/videoDetail.html', context)

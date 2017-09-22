@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %} Michael Auritt:{{ project.name }}{% endblock %}
+
+
+{% block content %}
+{% load staticfiles %}
+<div id="details">
+
+    <h1 id="title">{{ project.name }}</h1>
+
+    {% if project.host %}
+        <iframe
+        id="embed"
+        src="{{ project.host.base_embed_url }}{{ project.host_code }}"
+        width=640
+        height=360
+        frameborder=0
+        >
+
+        </iframe>
+    {% endif %}
+    <p id="description">{{ project.description }}</p>
+
+</div>
+
+{% endblock %}

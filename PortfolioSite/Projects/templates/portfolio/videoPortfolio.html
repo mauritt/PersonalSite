@@ -6,11 +6,20 @@
 <div id="portfolio">
     <div class="row">
     {% for project in examples %}
-        <div class="col-md-4 project"><img class="thumbnail_image" src="{% static '' %}{{ project.thumbnail_image}}"/>
+        <div class="col-md-4 project"><img onclick="show_video(this, {{ project.id }})" class="thumbnail_image" src="{% static '' %}{{ project.thumbnail_image}}"/>
         </div>
     {% endfor %}
     </ul>
     </div>
 </div>
+
+<div>
+    <div id="lightbox">
+</div>
+<div id="screen" onclick="hide_video(this)">
+</div>
+</div>
+
+
 
 {% endblock %}
