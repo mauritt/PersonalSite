@@ -4,12 +4,13 @@
 {% block content %}
 {% load staticfiles %}
 <div id="portfolio">
-    <ul id="project_list">
+    <div class="row">
     {% for project in examples %}
-        <li><img class="thumbnail_image" src="{% static '' %}{{ project.thumbnail_image}}" />
-        </li>
+        <div class="col-md-4"><img class="thumbnail_image" src="{% static '' %}{{ project.thumbnail_image}}"/>
+        </div>
     {% endfor %}
     </ul>
+    </div>
 </div>
 
 {% endblock %}
