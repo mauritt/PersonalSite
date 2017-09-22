@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %} Michael Auritt:{{ project_type }}{% endblock %}
+
+{% block content %}
+{% load staticfiles %}
+<div id="portfolio">
+    <ul id="project_list">
+    {% for project in examples %}
+        <li><img class="thumbnail_image" src="{% static '' %}{{ project.thumbnail_image}}" />
+        </li>
+    {% endfor %}
+    </ul>
+</div>
+
+{% endblock %}

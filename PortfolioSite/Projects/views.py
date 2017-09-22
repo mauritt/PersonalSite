@@ -9,4 +9,4 @@ def portfolio(request, project_type):
     context = {'project_type':project_type,'examples':examples}
 
     if project_type.lower() == 'video':
-        return HttpResponse("this works")
+        return render(request, 'portfolio/videoPortfolio.html', context)
