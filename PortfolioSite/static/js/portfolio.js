@@ -1,7 +1,7 @@
 function show_video(obj, proj_id){
     screen = document.getElementById("screen");
     screen.style.visibility ="visible";
-    screen.style.opacity = ".75";
+    screen.style.opacity = ".15";
     lightbox = document.getElementById("lightbox");
 
     $(lightbox).load("../detail/" + proj_id + " #details");
