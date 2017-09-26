@@ -6,7 +6,7 @@
 <div id="portfolio">
     <div class="row">
     {% for project in examples %}
-        <div class="col-md-4 project"><img onclick="show_video(this, {{ project.id }})" class="thumbnail_image" src="{% static '' %}{{ project.thumbnail_image}}"/>
+        <div class="col-md-4 project" class="project" ><img onclick="show_video(this, {{ project.id }})" class="thumbnail_image blur" src="{% static '' %}{{ project.thumbnail_image}}"/>
         </div>
     {% endfor %}
     </ul>
