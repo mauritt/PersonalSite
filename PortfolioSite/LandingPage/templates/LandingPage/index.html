@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %} Michael Auritt: Python Developer &amp; Video Producer{% endblock %}
+{% block header %}
+<div class="row">
+    <div class="col-md-7">
+        <h1>Michael Auritt</h1>
+    </div>
+</div>
+<div class="row">
+    <nav class="col-md-12">
+        <ul style="list-style-type: none">
+            <li><a href="{% url 'landingPage:index' %}">Home</a></li>
+            <li><a href="{% url 'projects:portfolio' 'Video' 'Tile' %}">Video</a></li>
+            <li><a href="{% url 'projects:portfolio' 'Code' 'Tile' %}">Code</a></li>
+            <li>Contact</li>
+        </ul>
+    </nav>
+</div>
+{% endblock %}
+
+{% block content %}
+<p>HELLOW WORLD!</p>
+{% endblock %}
