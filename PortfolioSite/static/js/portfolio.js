@@ -1,4 +1,4 @@
-function show_video(obj, proj_id){
+function show_project(obj, proj_id){
     screen = document.getElementById("screen");
     screen.style.visibility ="visible";
     screen.style.opacity = ".15";
@@ -20,7 +20,6 @@ function hide_video(obj){
     lightbox.style.visibility="hidden";
     lightbox.removeChild(embed);
 };
-
 
 
 window.onload = function(){

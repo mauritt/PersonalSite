@@ -19,4 +19,4 @@ def detail(request, project_id):
     context = {'project': project}
 
 
-    return render(request, 'portfolio/videoDetail.html', context)
+    return render(request, 'portfolio/projectDetail.html', context)
