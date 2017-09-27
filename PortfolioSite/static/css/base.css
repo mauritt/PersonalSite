@@ -115,7 +115,20 @@ header h1{
     border-style: solid;*/
 }
 
+#contact{
+    position: relative;
+    width: 50%;
+    left:   25%;
+}
 
+#contact label{
+    font-size: 1.5em;
+    margin-right: 1%;
 
+}
+
+#contact input, textarea{
+    width: 100%;
+}
 
 

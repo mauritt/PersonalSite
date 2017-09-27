@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'Projects',
     'LandingPage',
+    'Contact'
 ]
 
 MIDDLEWARE = [
@@ -126,3 +127,12 @@ STATICFILES_DIRS = (
 STATIC_URL = '/static/'
 
 MEDIA_ROOT = 'static/'
+
+
+EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
+EMAIL_HOST = os.environ.get('EMAIL_HOST')
+
+
+
+

@@ -1,0 +1,68 @@
+{% extends "LandingPage/index.html" %}
+{% block title %} Michael Auritt: Contact{% endblock %}
+{% block content %}
+{% csrf_token %}
+<form id="contact" class="form" role="form" action={% url "contact:send" %} method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Submit</button>
+</form>
+
+
+
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- {{ form.non_field_errors }} -->
+
+
+
+
+
+
+
+
+
+<!-- <div class="container">
+<form id="contact" class="form" role="form" action={% url "contact:send" %} method="post">
+<div class="fieldWrapper">
+    <div class="row">
+        <div class="col-md-2"
+        {{ form.sender_name.errors }}
+        <label for="{{ form.sender_name.id_for_label }}">{{ form.sender_name.label}}:</label>
+        </div>
+        <div class="col-md-6">
+        {{ form.sender_name }}
+    </div>
+    </div>
+</div>
+
+<div class="fieldWrapper">
+    {{ form.sender_message.errors }}
+    <label for="{{ form.sender_message.id_for_label }}">{{ form.sender_message.label}}:</label>
+    {{ form.sender_message }}
+</div>
+
+<div class="fieldWrapper">
+    {{ form.sender_email.errors }}
+    <label for="{{ form.sender_email.id_for_label }}">{{ form.sender_email.label}}:</label>
+    {{ form.sender_email }}
+    <button type="submit">Submit</button>
+</div>
+</form>
+
+
+
+</div> -->
