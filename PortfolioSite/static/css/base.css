@@ -8,27 +8,34 @@ body a{
     color: #175A8B;
 }
 
-body header{
+
+
+/* Header */
+
+header{
     font-size: 16pt;
-    padding: 3% 0%;
+    padding: 3% 0% 0% 0%;
     font-family: georgia, serif;
+    border-width:1px;
+    margin-bottom: 5%;
 }
 
+#title{
+    margin-bottom: 1%;
+}
 
 header h1{
     font-size: 4em;
 
 }
 
+header h2{
+    font-size:1em;
+}
 
-
-
-
-
-/* Header */
  nav ul{
     list-style-type: none;
-    padding: 1% 0;
+    padding: 1% 0 0 0;
 
  }
 
@@ -37,6 +44,7 @@ header h1{
     padding-right: 1.5%;
     font-size: 1.75em;
  }
+
 
  nav a{
 
@@ -79,6 +87,7 @@ header h1{
     visibility: hidden;
     animation-name: tile-on;
     animation-duration: 2s;
+    margin-bottom: 3%;
 }
 
 #screen{
@@ -109,11 +118,6 @@ header h1{
 
 }
 
-#embed{
-    /*border-width: .5em;
-    border-color: #000000;
-    border-style: solid;*/
-}
 
 #contact{
     position: relative;
