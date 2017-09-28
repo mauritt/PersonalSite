@@ -84,7 +84,7 @@ header h2{
 }
 
 .project{
-    visibility: hidden;
+    display: none;
     animation-name: tile-on;
     animation-duration: 2s;
     margin-bottom: 3%;

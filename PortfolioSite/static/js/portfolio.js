@@ -23,10 +23,14 @@ function hide_video(obj){
 
 
 window.onload = function(){
-    projects = document.getElementsByClassName("project");
+    var projects = document.getElementsByClassName("project");
+
     function time_delay(i){
         var delay=200;
-        return setTimeout(function(){projects[i].style.visibility = "visible";}, delay*i);
+        return setTimeout(function(){
+            projects[i].style.display = "inline";
+
+        }, delay*i);
     };
 
     for(i=0;i<projects.length;i++){

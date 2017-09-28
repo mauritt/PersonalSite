@@ -2,10 +2,10 @@
 {% load staticfiles %}
 
 {% block content %}
-<div id="portfolio">
-    <div class="row">
+<div >
+    <div class="row" id="portfolio" >
     {% for project in examples %}
-        <div class="col-md-4 project" class="project" ><img onclick="show_project(this, '{{ project.id }}')" class="thumbnail_image" src="{% static '' %}{{ project.thumbnail_image}}"/>
+        <div class="col-md-4 project"><img onclick="show_project(this, '{{ project.id }}')" class="thumbnail_image" src="{% static '' %}{{ project.thumbnail_image}}"/>
         </div>
     {% endfor %}
     </ul>
