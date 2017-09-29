@@ -1,7 +1,7 @@
 function show_project(obj, proj_id){
     screen = document.getElementById("screen");
     screen.style.visibility ="visible";
-    screen.style.opacity = ".15";
+    screen.style.opacity = ".90";
     lightbox = document.getElementById("lightbox");
 
     $(lightbox).load("../detail/" + proj_id + " #details");
@@ -11,11 +11,15 @@ function show_project(obj, proj_id){
     lightbox.style.opacity = "1";
 };
 
-function hide_video(obj){
-    obj.style.opacity = "0"
-    obj.style.visibility = "hidden";
-    lightbox = document.getElementById("lightbox");
-    embed = document.getElementById("details");
+function hide_video(){
+    var screen = document.getElementById('screen');
+    screen.style.opacity = "0"
+    screen.style.visibility = "hidden";
+    var x = document.getElementById('closeButton');
+    x.style.opacity = "0"
+    x.style.visibility = "hidden";
+    var lightbox = document.getElementById("lightbox");
+    var embed = document.getElementById("details");
     lightbox.style.opacity = "0"
     lightbox.style.visibility="hidden";
     lightbox.removeChild(embed);
