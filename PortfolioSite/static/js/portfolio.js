@@ -4,7 +4,7 @@ function show_project(obj, proj_id){
     screen.style.opacity = ".90";
     lightbox = document.getElementById("lightbox");
 
-    $(lightbox).load("../detail/" + proj_id + " #details");
+    $(lightbox).load("/portfolio/detail/" + proj_id + " #details");
 
     lightbox.style.visibility="visible";
 

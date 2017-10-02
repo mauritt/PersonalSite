@@ -34,6 +34,7 @@ header h2{
 }
 
  nav ul{
+
     list-style-type: none;
     padding: 1% 0 0 0;
 
@@ -156,5 +157,20 @@ header h2{
     margin-bottom: 3%;
 
 }
+
+
+.tagList{
+    list-style-type: none;
+
+}
+
+
+.tagList li{
+    display: inline;
+    font-size: 1.3em;
+    margin-right: 1.3%;
+}
+
+
 
 
