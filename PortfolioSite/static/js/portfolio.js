@@ -26,6 +26,16 @@ function hide_video(){
 };
 
 
+function swapLogo(obj,imagePath){
+    var newPath = obj.src.split('/');
+    newPath.pop();
+    newPath = newPath.join('/') + '/' + imagePath
+
+    obj.src=newPath;
+
+}
+
+
 window.onload = function(){
     var projects = document.getElementsByClassName("project");
 
@@ -42,3 +52,5 @@ window.onload = function(){
 
     };
 };
+
+
