@@ -1,24 +1,21 @@
 {% extends "base.html" %}
 {% block title %} Michael Auritt: Python Developer &amp; Video Producer{% endblock %}
-{% block header %}
-<div class="row">
-    <div class="col-md-7" id="title">
-        <h1>Michael Auritt</h1>
-        <h2>Python Developer &amp; Video Producer</h2>
-    </div>
-</div>
-<div class="row">
-    <nav class="col-md-12" id="siteNav">
-        <ul id="{% block navID %}Home{% endblock %}" >
-            <li><a class="" href="{% url 'landingPage:index' %}">Home</a></li>
-            <li><a class="" href="{% url 'projects:portfolio' 'Video' 'Tile' %}">Video</a></li>
-            <li><a class="" href="{% url 'projects:portfolio' 'Code' 'Tile' %}">Code</a></li>
-            <li><a class="" href="{% url 'contact:contact' %}">Contact</a></li>
-        </ul>
-    </nav>
+
+
+{% block content %}
+<div id="siteTitle">
+    <h1>Michael Auritt</h1>
+    <h2>Video Producer &amp; Self-taught Developer</h2>
 </div>
 {% endblock %}
 
-{% block content %}
-<p>HELLO WORLD!</p>
+{% block footer %}
+<nav id="siteNav" class="row">
+    <ul class="col-md-12">
+        <li><a href="" onclick="changePage(this, 'aboutPage')">About</a></li>
+        <li><a href="" onclick="changePage(this, 'portfolio')">Code</a></li>
+        <li><a href="" onclick="changePage(this, 'portfolio')">Video</a></li>
+        <li><a href="" onclick="changePage(this, 'contactpage')">Contact</a></li>
+    </ul>
+</nav>
 {% endblock %}

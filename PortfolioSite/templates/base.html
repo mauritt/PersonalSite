@@ -12,16 +12,23 @@
 
     <body>
         <div class="container">
-            <header>
+
+            <header class="container">
                 {% block header %}
                 {% endblock %}
             </header>
 
-            <main id="main">
+            <main class="container", id="main">
                 {% block content %}
                 {% endblock %}
             </main>
-    </div>
+
+            <footer class="container">
+                {% block footer %}
+                {% endblock %}
+            </footer>
+
+        </div>
 
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
