@@ -198,5 +198,14 @@ header h2{
 }
 
 
+.inactive {
+    color: black;
+    cursor: none;
+}
 
+.inactive:hover {
+    color: black;
+    cursor: default;
+    text-decoration: none;
+}
 

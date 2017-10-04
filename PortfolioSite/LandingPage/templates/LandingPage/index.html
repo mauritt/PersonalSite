@@ -8,12 +8,12 @@
     </div>
 </div>
 <div class="row">
-    <nav class="col-md-12">
-        <ul style="list-style-type: none">
-            <li><a href="{% url 'landingPage:index' %}">Home</a></li>
-            <li><a href="{% url 'projects:portfolio' 'Video' 'Tile' %}">Video</a></li>
-            <li><a href="{% url 'projects:portfolio' 'Code' 'Tile' %}">Code</a></li>
-            <li><a href="{% url 'contact:contact' %}">Contact</a></li>
+    <nav class="col-md-12" id="siteNav">
+        <ul id="{% block navID %}Home{% endblock %}" >
+            <li><a class="" href="{% url 'landingPage:index' %}">Home</a></li>
+            <li><a class="" href="{% url 'projects:portfolio' 'Video' 'Tile' %}">Video</a></li>
+            <li><a class="" href="{% url 'projects:portfolio' 'Code' 'Tile' %}">Code</a></li>
+            <li><a class="" href="{% url 'contact:contact' %}">Contact</a></li>
         </ul>
     </nav>
 </div>

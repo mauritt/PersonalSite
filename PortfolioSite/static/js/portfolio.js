@@ -35,8 +35,25 @@ function swapLogo(obj,imagePath){
 
 }
 
+function activatePage(){
+    var navList = document.getElementById("siteNav").firstElementChild
+    var pageName = navList.id;
+    var listItems = navList.getElementsByTagName('li');
+
+    for (var i = 0; i < listItems.length; i++) {
+        var link = listItems[i].firstElementChild
+        var linkName = link.innerHTML;
+
+        $(link).toggleClass('inactive', (linkName==pageName));
+
+    };
+};
+
 
 window.onload = function(){
+
+    activatePage();
+
     var projects = document.getElementsByClassName("project");
 
     function time_delay(i){
