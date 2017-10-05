@@ -2,7 +2,7 @@
 {% load staticfiles %}
 <div id="details">
 
-
+    <h2 id="project_{{ project.id }}">{{ project.name }}</h2>
     {% if project.host.base_embed_url %}
         <iframe
         id="embed"

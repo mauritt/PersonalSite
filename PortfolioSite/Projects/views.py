@@ -9,7 +9,7 @@ def portfolio(request, project_type):
     examples = Project.objects.all().filter(project_type = proj_type_id.id).order_by('priority')
 
     context['featured'] = examples[0]
-    context['examples'] = examples[1:]
+    context['examples'] = examples
     context['project_type'] = project_type
 
 
