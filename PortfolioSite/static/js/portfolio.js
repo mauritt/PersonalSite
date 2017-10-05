@@ -5,9 +5,11 @@ function changePage(obj, section){
     var url = section + "/" + newPage + " #content";
 
     $(main).load(url, function(){
-        var thumbnailList = document.getElementById('thumbnails');
-        var image = thumbnailList.firstElementChild.firstElementChild;
-        fillDetails(image);
+        if(newPage == "Video" || newPage=="Code"){
+            var thumbnailList = document.getElementById('thumbnails');
+            var image = thumbnailList.firstElementChild.firstElementChild;
+            fillDetails(image);
+        };
     });
 };
 
@@ -18,12 +20,10 @@ function fillDetails(obj){
     if (currentDetails){
         var currentID = currentDetails.firstElementChild.id;
         currentID = currentID.split('_')[1]
-        console.log(currentID)
 
         addThumbnail(currentID);
     };
 
-    console.log(obj.id);
 
     removeThumbnail(obj.id);
 
@@ -42,7 +42,6 @@ function addThumbnail(id){
 
 
 function removeThumbnail(id){
-    console.log('hey')
     var thumbnailItem = document.getElementById(id).parentElement;
     thumbnailItem.style.display = "none"
 
@@ -71,3 +70,13 @@ function activatePage(){
 
     };
 };
+
+function sent(){
+    var contact = document.getElementById('contactForm')
+    $(contact).load("contactpage/sent #successMessage")
+}
+
+
+
+
+

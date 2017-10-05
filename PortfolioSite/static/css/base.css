@@ -5,8 +5,6 @@ body{
     font-size: 20pt;
 }
 
-
-
 /* Site Title */
 
 #siteTitle{
@@ -103,5 +101,16 @@ footer{
     text-align: center;
 }
 
+/* Contact Page */
+#contact{
+}
+
+#contactIcons{
+    list-style-type: none;
+}
 
 
+
+#contactIcons img{
+    width: 30%;
+}

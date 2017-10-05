@@ -3,38 +3,43 @@
 {% block navID %}Contact{% endblock %}"
 {% block content %}
  {% load staticfiles %}
+<div id="content" class="row">
+<div class="col-md-4" id="contactPage">
+    <ul id="contactIcons">
+        <li>
+            <h4>LinkedIn:</h4>
+                <a href="https://www.linkedin.com/in/mauritt/">
+                    <img
+                        id="LinkedIn"
+                        src="{% static 'images/Logos/LinkedIn/LinkedIn_Logo_NoHover.png' %}"
+                        onmouseover="swapLogo(this, 'LinkedIn_Logo_Hover.png');"
+                        onmouseout="swapLogo(this, 'LinkedIn_Logo_NoHover.png');"
+                        alt="LinkedIn"
+                    >
+                </a>
+        </li>
 
-<div class="row" id="contactIcons">
-    <div>
-        <a href="https://www.linkedin.com/in/mauritt/">
-            <img
-                id="LinkedIn"
-                src="{% static 'images/Logos/LinkedIn/LinkedIn_Logo_NoHover.png' %}"
-                onmouseover="swapLogo(this, 'LinkedIn_Logo_Hover.png');"
-                onmouseout="swapLogo(this, 'LinkedIn_Logo_NoHover.png');"
-                alt="LinkedIn"
-            >
-        </a>
-    </div>
-    <div>
-        <a href="https://github.com/mauritt">
-            <img
-                id="GitHub"
-                src="{% static 'images/Logos/GitHub/GitHub_Logo_NoHover.png' %}"
-                onmouseover="swapLogo(this, 'GitHub_Logo_Hover.png');"
-                onmouseout="swapLogo(this, 'GitHub_Logo_NoHover.png');"
-                alt="GitHub"></a>
-    </div>
+        <li>
+            <h4>GitHub:</h4>
+                <a href="https://github.com/mauritt">
+                    <img
+                        id="GitHub"
+                        src="{% static 'images/Logos/GitHub/GitHub_Logo_NoHover.png' %}"
+                        onmouseover="swapLogo(this, 'GitHub_Logo_Hover.png');"
+                        onmouseout="swapLogo(this, 'GitHub_Logo_NoHover.png');"
+                        alt="GitHub"
+                    >
+                </a>
+        </li>
+    </ul>
 </div>
-
+<div class="col-md-8" id=contactForm>
+    <form id="contact" target="submission.frame" class="form" role="form" action={% url "contact:send" %} method="post" onsubmit="sent()">
     {% csrf_token %}
-    <form id="contact" class="form" role="form" action={% url "contact:send" %} method="post">
+
         {{ form.as_p }}
         <button type="submit">Submit</button>
+        <iframe name="submission.frame" hidden></iframe>
     </form>
-
-
-
-
-
+</div>
 {% endblock %}

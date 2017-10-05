@@ -20,6 +20,6 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^', include('LandingPage.urls', namespace="landingPage")),
     url(r'^portfolio/', include('Projects.urls', namespace='projects')),
-    url(r'^contact/', include('Contact.urls', namespace='contact')),
+    url(r'^contactpage/', include('Contact.urls', namespace='contact')),
 
 ]
