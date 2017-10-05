@@ -20,13 +20,15 @@
     <li>{{ tag_category.name }}s:</li>
         {% for tag in tags %}
             {% if tag.category == tag_category %}
-                <li><a href="{% url 'projects:tag' project.project_type  tag.name 'Tile' %}">{{ tag.name }}</a></li>
+                <li><a>{{ tag.name }}</a></li>
             {% endif %}
         {% endfor %}
     {% endfor %}
     </ul>
 
-    <p id="description">{{ project.description }}</p>
+    <div id="description">
+    <p>{{ project.description }}</p>
+    </div>
 
 </div>
 

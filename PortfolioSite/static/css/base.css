@@ -28,7 +28,6 @@ body{
 /* Site Navigation */
 
 footer{
-    margin-top: 3%;
 }
 
 #siteNav ul{
@@ -46,12 +45,16 @@ footer{
 
 
 /* Portfolio Page */
-    #content{
-        padding-top: 5%;
-    }
+#content{
+    padding-top: 5%;
+}
 
 
 /* Portfolio Details */
+
+#details h2{
+    font-size: 1em;
+}
 
 #details .tagList{
     list-style-type: none;
@@ -68,6 +71,7 @@ footer{
 
 #details #description{
     font-size: .75em;
+    height: 12em;
 }
 
 /* Portfolio Projects List */
