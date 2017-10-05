@@ -71,13 +71,12 @@ footer{
 
 #details #description{
     font-size: .75em;
-    height: 12em;
+    height: 10em;
 }
 
 /* Portfolio Projects List */
 
 #projects{
-    padding: 0;
 }
 
 #projects ul{
@@ -86,19 +85,17 @@ footer{
 }
 
 #projects .thumbnail{
-    width: 65%;
-    margin: 0 auto 5% auto;
+    width: 80%;
     border-style: solid;
     border-width: 2px;
     cursor: pointer;
+    margin-bottom: 5%;
 
 }
 #projects h3{
     font-size: .9em;
-    border-bottom-style: solid;
-    width: 80%;
-    position: relative;
-    left:10%;
+    text-align: center;
 }
+
 
 
