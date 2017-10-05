@@ -69,6 +69,12 @@ footer{
     width: 100%;
 }
 
+#details #posterImage{
+    width: 90%;
+    border-style: solid;
+
+}
+
 #details #description{
     font-size: .75em;
     height: 10em;

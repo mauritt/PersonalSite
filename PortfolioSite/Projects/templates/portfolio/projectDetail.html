@@ -13,6 +13,13 @@
         >
 
         </iframe>
+    {% else %}
+        <img
+            id="posterImage"
+            width=640
+        height=360
+            src="{% static project.thumbnail_image %}"
+                >
     {% endif %}
 
     {% for tag_category in tag_categories %}
