@@ -3,16 +3,18 @@ from django.http import HttpResponse
 from .models import Project, Project_type, Host, Tag, Tag_Category
 
 
-def portfolio(request, project_type, view):
+def portfolio(request, project_type):
+    context = {}
     proj_type_id = get_object_or_404(Project_type, name__iexact = project_type)
-    examples = Project.objects.all().filter(project_type = proj_type_id.id)
-    context = {'project_type':project_type,'examples':examples}
+    examples = Project.objects.all().filter(project_type = proj_type_id.id).order_by('priority')
 
-    if view.lower() == 'tile':
-        return render(request, 'portfolio/tiledPortfolio.html', context)
+    context['featured'] = examples[0]
+    context['examples'] = examples[1:]
+    context['project_type'] = project_type
 
-    if view.lower() == 'list':
-        return render(request, 'portfolio/listPortfolio.html', context)
+
+    return render(request, 'portfolio/Portfolio.html', context)
+
 
 def tag(request, project_type,project_tag,view):
     proj_type_id = get_object_or_404(Project_type, name__iexact = project_type)

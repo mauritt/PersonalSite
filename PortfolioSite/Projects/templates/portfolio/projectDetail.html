@@ -1,23 +1,7 @@
-{% extends "base.html" %}
-{% block title %} Michael Auritt:{{ project.name }}{% endblock %}
-
-
 {% block content %}
 {% load staticfiles %}
 <div id="details">
-    <p><i class="material-icons" id="closeButton" onclick="hide_video()">highlight_off</i></p>
 
-    <h1 id="title">{{ project.name }}</h1>
-    {% for tag_category in tag_categories %}
-    <ul class="tagList">
-    <li>{{ tag_category.name }}s:</li>
-        {% for tag in tags %}
-            {% if tag.category == tag_category %}
-                <li><a href="{% url 'projects:tag' project.project_type  tag.name 'Tile' %}">{{ tag.name }}</a></li>
-            {% endif %}
-        {% endfor %}
-    {% endfor %}
-</ul>
 
     {% if project.host.base_embed_url %}
         <iframe
@@ -30,6 +14,18 @@
 
         </iframe>
     {% endif %}
+
+    {% for tag_category in tag_categories %}
+    <ul class="tagList" >
+    <li>{{ tag_category.name }}s:</li>
+        {% for tag in tags %}
+            {% if tag.category == tag_category %}
+                <li><a href="{% url 'projects:tag' project.project_type  tag.name 'Tile' %}">{{ tag.name }}</a></li>
+            {% endif %}
+        {% endfor %}
+    {% endfor %}
+    </ul>
+
     <p id="description">{{ project.description }}</p>
 
 </div>

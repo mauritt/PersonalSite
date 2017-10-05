@@ -1,11 +1,27 @@
 
 function changePage(obj, section){
-    var main = getElementById('Main');
+    var main = document.getElementById('main');
     var newPage = obj.innerHTML;
-    var url = './' + section + '/' + newPage;
+    var url = section + "/" + newPage + " #content";
 
-    $(main).load(url + " #project")
+    $(main).load(url, function(){
+        var featured = document.getElementById('featured')
+        if(featured){
+            fillDetails(featured);
+        }
+    })
 }
+
+
+function fillDetails(obj){
+    var id = obj.firstElementChild.id;
+    var url = 'portfolio/details/' + id +' #details'
+    $(obj).load(url);
+
+}
+
+
+
 
 function swapLogo(obj,imagePath){
     var newPath = obj.src.split('/');
@@ -29,4 +45,3 @@ function activatePage(){
 
     };
 };
-

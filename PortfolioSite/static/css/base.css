@@ -29,7 +29,7 @@ body{
 
 footer{
     position: absolute;
-    bottom: 30%;
+    bottom: 5%;
 }
 
 #siteNav ul{
@@ -44,3 +44,57 @@ footer{
 #siteNav li a{
     font-size: 1.5em;
 }
+
+
+/* Portfolio Page */
+    #content{
+        padding-top: 5%;
+    }
+
+
+/* Portfolio Details */
+
+#details .tagList{
+    list-style-type: none;
+}
+
+#details .tagList li{
+    display: inline;
+}
+
+#details #embed{
+    border-style: solid;
+    width: 100%;
+}
+
+#details #description{
+    font-size: .75em;
+}
+
+/* Portfolio Projects List */
+
+#projects{
+    padding: 0;
+}
+
+#projects ul{
+    list-style-type: none;
+
+}
+
+#projects .thumbnail{
+    width: 65%;
+    margin: 0 auto 5% auto;
+    border-style: solid;
+    border-width: 2px;
+
+}
+#projects h3{
+    font-size: .9em;
+    border-bottom-style: solid;
+    width: 80%;
+    position: relative;
+    left:10%;
+}
+
+

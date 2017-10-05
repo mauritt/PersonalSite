@@ -1,0 +1,20 @@
+<div id="content" class="row">
+
+    <div id="featured" class="col-md-8">
+        <div id="{{featured.id}}"></div>
+    </div>
+
+    <div class="col-md-4" id="projects">
+        <ul id="thumbnails">
+            {% load staticfiles %}
+            {% for example in examples %}
+            <li>
+                <img class="thumbnail" src="{% static example.thumbnail_image %}">
+            </li>
+            {% endfor %}
+        </ul>
+
+    </div>
+
+</div>
+
