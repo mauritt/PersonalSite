@@ -10,8 +10,8 @@ body{
 /* Site Title */
 
 #siteTitle{
-    position: absolute;
-    top:23%;
+    margin-top:15%;
+    margin-bottom: 10%;
 }
 
 #siteTitle h1{
@@ -28,8 +28,7 @@ body{
 /* Site Navigation */
 
 footer{
-    position: absolute;
-    bottom: 5%;
+    margin-top: 3%;
 }
 
 #siteNav ul{
