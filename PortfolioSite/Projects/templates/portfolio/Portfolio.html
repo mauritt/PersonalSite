@@ -9,7 +9,12 @@
             {% load staticfiles %}
             {% for example in examples %}
             <li>
-                <img class="thumbnail" src="{% static example.thumbnail_image %}">
+                <img
+                    class="thumbnail"
+                    src="{% static example.thumbnail_image %}"
+                    id = "{{ example.id }}"
+                    onclick = "fillDetails(this)"
+                >
             </li>
             {% endfor %}
         </ul>

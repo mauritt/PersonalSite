@@ -6,17 +6,19 @@ function changePage(obj, section){
 
     $(main).load(url, function(){
         var featured = document.getElementById('featured')
+        var featuredProject = featured.firstElementChild;
         if(featured){
-            fillDetails(featured);
+            fillDetails(featuredProject);
         }
     })
 }
 
 
 function fillDetails(obj){
-    var id = obj.firstElementChild.id;
-    var url = 'portfolio/details/' + id +' #details'
-    $(obj).load(url);
+    console.log(obj.id)
+    var featured = document.getElementById('featured')
+    var url = 'portfolio/details/' + obj.id + ' #details'
+    $(featured).load(url);
 
 }
 
