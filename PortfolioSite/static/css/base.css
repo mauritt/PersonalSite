@@ -5,11 +5,14 @@ body{
     font-size: 20pt;
 }
 
+
+
 /* Site Title */
 
 #siteTitle{
     margin-top:15%;
     margin-bottom: 10%;
+
 }
 
 #siteTitle h1{
@@ -25,7 +28,10 @@ body{
 
 /* Site Navigation */
 
-footer{
+
+header{
+    margin-top: 1%;
+    margin-bottom: 0;
 }
 
 #siteNav ul{
@@ -44,7 +50,7 @@ footer{
 
 /* Portfolio Page */
 #content{
-    padding-top: 5%;
+    padding-top: 2%;
 }
 
 
@@ -75,7 +81,6 @@ footer{
 
 #details #description{
     font-size: .75em;
-    height: 10em;
 }
 
 /* Portfolio Projects List */
@@ -94,6 +99,8 @@ footer{
     border-width: 2px;
     cursor: pointer;
     margin-bottom: 5%;
+
+
 
 }
 #projects h3{
