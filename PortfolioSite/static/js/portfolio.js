@@ -9,6 +9,7 @@ function changePage(obj, section){
             var thumbnailList = document.getElementById('thumbnails');
             var image = thumbnailList.firstElementChild.firstElementChild;
             fillDetails(image);
+            showThumbnails();
         };
     });
 };
@@ -76,7 +77,10 @@ function sent(){
     $(contact).load("contactpage/sent #successMessage")
 }
 
-
-
-
-
+function showThumbnails(){
+    $("#projects li").each(function(i) {
+        if(i!=0){
+        $(this).delay(100 * i).fadeIn(500);
+    };
+ });
+}

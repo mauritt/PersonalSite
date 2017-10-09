@@ -9,10 +9,10 @@ body{
 
 /* Site Title */
 
+
 #siteTitle{
     margin-top:15%;
     margin-bottom: 10%;
-
 }
 
 #siteTitle h1{
@@ -91,6 +91,10 @@ header{
 #projects ul{
     list-style-type: none;
 
+}
+
+#projects li{
+    display: none;
 }
 
 #projects .thumbnail{
