@@ -85,6 +85,8 @@ header{
 
 #details .tagList li{
     display: inline;
+    padding-right: 2%;
+
 }
 
 #details #embed{
@@ -100,6 +102,7 @@ header{
 
 #details #description{
     font-size: .75em;
+    margin-top: 3%;
 }
 
 /* Portfolio Projects List */
@@ -132,15 +135,60 @@ header{
 }
 
 /* Contact Page */
-#contact{
+
+#externalSites{
+    margin-top: 0;
+    margin-left: 5%;
 }
 
 #contactIcons{
     list-style-type: none;
+    position: relative;
+    left: 20%;
+    width: 40%;
+    padding-left: 20%;;
+
 }
 
-
+#contactIcons li{
+    padding-right: 5%;
+    display: inline;
+}
 
 #contactIcons img{
-    width: 30%;
+    width: 20%;
 }
+
+#contactForm{
+    padding: 1% 3% 3% 3%;
+    left: 10%;
+    font-size: .75em;
+
+}
+
+#contactForm label{
+    display: block;
+    width: 50%;
+    margin: 0 25%;
+}
+
+#contactForm input, textarea{
+    margin: 0 25%;
+    width: 50%;
+}
+
+#contactForm h2{
+    font-size: 1.5em;
+    border-bottom-style: solid;
+    border-width: 1px;
+    margin-bottom: 5%;
+    width: 30%;
+    text-align: center;
+    margin-left:35%;
+}
+
+#contactForm button{
+    margin-left:25%;
+}
+
+

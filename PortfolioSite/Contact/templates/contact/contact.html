@@ -3,11 +3,10 @@
 {% block navID %}Contact{% endblock %}"
 {% block content %}
  {% load staticfiles %}
-<div id="content" class="row">
-<div class="col-md-4" id="contactPage">
-    <ul id="contactIcons">
-        <li>
-            <h4>LinkedIn:</h4>
+<div id="content">
+    <div id="externalSites" class="row">
+        <ul id="contactIcons" class="col-6">
+            <li>
                 <a href="https://www.linkedin.com/in/mauritt/">
                     <img
                         id="LinkedIn"
@@ -17,10 +16,9 @@
                         alt="LinkedIn"
                     >
                 </a>
-        </li>
+            </li>
 
-        <li>
-            <h4>GitHub:</h4>
+            <li>
                 <a href="https://github.com/mauritt">
                     <img
                         id="GitHub"
@@ -30,16 +28,21 @@
                         alt="GitHub"
                     >
                 </a>
-        </li>
-    </ul>
-</div>
-<div class="col-md-8" id=contactForm>
-    <form id="contact" target="submission.frame" class="form" role="form" action={% url "contact:send" %} method="post" onsubmit="sent()">
-    {% csrf_token %}
+            </li>
+        </ul>
 
+    </div>
+    <div class="col-md-10" id="contactForm">
+        <h2>Email Me</h2>
+        <form id="contact" target="submission.frame" class="form" role="form" action={% url "contact:send" %} method="post" onsubmit="sent()">
+        {% csrf_token %}
         {{ form.as_p }}
         <button type="submit">Submit</button>
         <iframe name="submission.frame" hidden></iframe>
-    </form>
+        </form>
+
+    </div>
+
 </div>
+
 {% endblock %}
