@@ -11,7 +11,7 @@ body{
 
 
 #siteTitle{
-    margin-top:8%;
+    margin-top:5%;
     margin-bottom: 5%;
 }
 
@@ -38,14 +38,14 @@ body{
 
 /* Site Navigation */
 
-
 header{
-    margin-top: 1%;
+    margin-top: 3%;
     margin-bottom: 0;
 }
 
 #siteNav ul{
     list-style-type: none;
+    padding-left: 20%;
 }
 
 #siteNav li{
@@ -55,6 +55,15 @@ header{
 
 #siteNav li a{
     font-size: 1.5em;
+}
+
+#siteNav .inactive a{
+    color: #000000;
+    cursor: default;
+}
+
+#siteNav .inactive a:hover{
+    text-decoration: none;
 }
 
 

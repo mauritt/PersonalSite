@@ -1,5 +1,15 @@
 
 function changePage(obj, section){
+    var currentActive = document.getElementsByClassName("inactive")
+
+    for (var i = 0; i < currentActive.length; i++) {
+        $(currentActive[i]).toggleClass('inactive');
+    };
+
+    var listItem = obj.parentElement;
+    $(listItem).toggleClass('inactive');
+
+
     var main = document.getElementById('main');
     var newPage = obj.innerHTML;
     var url = section + "/" + newPage + " #content";
