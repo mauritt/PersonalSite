@@ -11,8 +11,8 @@ body{
 
 
 #siteTitle{
-    margin-top:15%;
-    margin-bottom: 10%;
+    margin-top:8%;
+    margin-bottom: 5%;
 }
 
 #siteTitle h1{
@@ -23,7 +23,17 @@ body{
     font-size: 2em;
 }
 
+/* Bio */
 
+#bio {
+    border-top-style: solid;
+    border-width: 1px;
+    padding: 1%;
+}
+
+#bio p{
+    font-size: .75em;
+}
 
 
 /* Site Navigation */
