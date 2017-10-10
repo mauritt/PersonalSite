@@ -36,7 +36,7 @@ class Project(models.Model):
     description = models.TextField()
     hidden = models.BooleanField(default = False)
     priority = models.IntegerField()
-    url = models.URLField()
+    url = models.URLField(blank = True, null=True)
     host_code = models.CharField(max_length = 15, blank = True, null=True)
     host = models.ForeignKey('Host', blank=True, null=True)
     thumbnail_image = models.ImageField(upload_to='uploads/thumbnails')
@@ -46,3 +46,11 @@ class Project(models.Model):
 
     def __str__(self):
         return self.name
+
+    def displayURL(self):
+        if "http://www." in self.url:
+            return self.url.strip("http://www.")
+        elif "http://" in self.url:
+            return self.url.strip("http://")
+        else:
+            return self.url

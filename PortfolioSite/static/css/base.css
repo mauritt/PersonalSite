@@ -76,7 +76,11 @@ header{
 /* Portfolio Details */
 
 #details h2{
-    font-size: 1em;
+    font-size: 1.25em;
+}
+
+#details h3{
+    font-size: .85em;
 }
 
 #details .tagList{
