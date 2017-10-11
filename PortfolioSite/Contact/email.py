@@ -1,15 +1,12 @@
-from django.conf import settings
 from django.utils import timezone
 from email.mime.text import MIMEText
 from smtplib import SMTP_SSL
-from os.path import expanduser
-
-
+import os
 
 emailInfo = {}
-emailInfo['frmEmailAddress'] = settings.EMAIL_HOST_USER
-emailInfo['frmEmailPassword'] = settings.EMAIL_HOST_PASSWORD
-emailInfo['frmEmailServer'] = settings.EMAIL_HOST
+emailInfo['frmEmailAddress'] = os.environ['EMAIL_HOST_USER']
+emailInfo['frmEmailPassword'] = os.environ['EMAIL_HOST_PASSWORD']
+emailInfo['frmEmailServer'] = os.environ['EMAIL_HOST']
 
 def send_contact_email(sender_name, sender_email, message):
 
