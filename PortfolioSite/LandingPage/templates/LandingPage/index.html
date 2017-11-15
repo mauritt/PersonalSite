@@ -16,11 +16,11 @@
 
 {% block content %}
 <div id="siteTitle">
-    <h1>Michael Auritt</h1>
-    <h2>Video Producer &amp; Self-taught Developer</h2>
+    <h1>{{ details.name }}</h1>
+    <h2>{{ details.heading }}</h2>
 </div>
 <div id="bio">
-    <p>As a video producer, director, and editor, I've worked with academic experts, Fortune 500 executives, and U.S. military leaders to help companies grow their leaders through compelling and informative video content. It’s been a fun and challenging career allowing me to combine my passions for creativity, learning, and technical problem solving. Those passions have recently driven me to seek out a new challenge in becoming a web developer. Through self-directed learning, attending conferences, giving technical talks and developing personal projects my abilities in Python, Django, JavaScript and other areas have grown tremendously in recent years. It's an effort I've found to be incredibly fun and rewarding.</p>
+    <p>{{ details.description }}</p>
 </div>
 {% endblock %}
 
